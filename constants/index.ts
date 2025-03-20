@@ -104,16 +104,16 @@ export const onboarding = [
     },
     {
         id: 2,
-        title: "Simplify Attendance Tracking",
+        title: "Track Your Child’s Ride",
         description:
-            "Easily mark attendance and manage child details with just a few taps.",
+            "Receive instant notifications when your child is picked up, dropped off, or when the bus arrives. Always stay informed",
         image: images.onboarding2,
     },
     {
         id: 3,
-        title: "Stay on Track",
+        title: "Secure & Reliable",
         description:
-            "Plan your trips, track routes, and keep parents informed with instant notifications",
+            "We prioritize your child’s safety with trusted drivers and secure transport. Peace of mind, every ride",
         image: images.onboarding3,
     },
 ];

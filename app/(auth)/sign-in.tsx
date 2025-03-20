@@ -5,10 +5,10 @@ import CustomButton from '@/components/CustomButton'
 import {icons} from '@/constants'
 import {Link} from 'expo-router'
 import OAuth from "@/components/OAuth"
-import {signUp} from "@/api/backend"
+import {signIn} from "@/api/backend"
 
 
-const SignUp = () => {
+const SignIn = () => {
 
     const [form, setForm] = useState({
         email: "",
@@ -22,7 +22,7 @@ const SignUp = () => {
             return;
         }
         try {
-            const response = await signUp(
+            const response = await signIn(
                 form.email,
                 form.name,
                 form.password
@@ -34,7 +34,7 @@ const SignUp = () => {
 
     return (
         <ScrollView className="flex-1 bg-white ">
-            <View className="flex justify-center bg-white mx-4 h-full">
+            <View className="flex justify-center mt-10  bg-white mx-4 h-full">
                 <Text className="text-4xl text-blue-500 font-JakartaExtraBold">Login</Text>
                 <Text className="text-lg mt-2 font-JakartaBold  ">Welcome back! Sign in to your account</Text>
                 <View className="py-5 px-2 flex justify-center">
@@ -50,7 +50,7 @@ const SignUp = () => {
                         placeholder="Enter your username"
                         icon={icons.person}
                         value={form.name}
-                        onChangeText={(value) => setForm({...form, email: value})}
+                        onChangeText={(value) => setForm({...form, name: value})}
                     />
                     <InputField
                         label="Password"
@@ -63,9 +63,8 @@ const SignUp = () => {
                     <CustomButton title="Sign In" className='py-4 mt-8' onPress={handleSignIn}/>
                 </View>
             </View>
-            <OAuth/>
         </ScrollView>
     )
 }
 
-export default SignUp
+export default SignIn
