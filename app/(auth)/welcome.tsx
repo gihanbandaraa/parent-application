@@ -34,7 +34,7 @@ const Onboarding = () => {
                         </TouchableOpacity>
                         <Image
                             source={item.image}
-                            className="w-full h-[350px] object-cover"
+                            className="w-full max-h-[500px] object-cover"
                             resizeMode="cover"
                         />
                         <View className="flex flex-row items-center justify-center w-full mt-10">

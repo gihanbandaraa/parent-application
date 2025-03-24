@@ -27,7 +27,7 @@ export const signIn = async (email: string, name: string, password: string) => {
                 {text: 'OK', onPress: () => router.replace('/(root)/home')}
             ]);
         } else {
-            Alert.alert('Error', data.message || 'Something went wrong');
+            Alert.alert('Error', data.error || 'Something went wrong');
         }
     } catch (error) {
         console.error(error);
