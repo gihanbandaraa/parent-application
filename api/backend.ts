@@ -44,7 +44,6 @@ export const getDetails = async (userId: string) => {
             },
         });
         const data = await response.json();
-        console.log(data);
         if (response.ok) {
             await AsyncStorage.setItem('userDetails', JSON.stringify(data));
         } else {
